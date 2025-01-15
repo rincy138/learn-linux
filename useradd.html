@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>useradd Command</title>
+  <style>
+      body {
+      font-family: Arial, sans-serif;
+      color: #1a1a1a;
+      background: linear-gradient(to bottom right, #f7f7f7, #dcdcdc);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    header {
+      text-align: center;
+      margin: 20px 0;
+      text-decoration: none;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      font-family: Algerian, serif;
+      color: #4a4a4a;
+      text-shadow: 0 4px 8px rgba(74, 74, 74, 0.4);
+    }
+
+    .section-container {
+      width: 90%;
+      max-width: 800px;
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 10px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      animation: fadeInSection 1.5s ease-out forwards;
+    }
+
+    .section-container:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .section-container h2 {
+      color: #4a4a4a;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      font-family: Algerian, serif;
+    }
+
+    pre {
+      background-color: #f0f0f0;
+      color: #333;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+    }
+
+    code {
+      background-color: #e0e0e0;
+      border: 1px solid #ddd;
+      padding: 5px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    ul {
+      font-size: 1.2em;
+    }
+
+    @keyframes fadeInSection {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>useradd Command</h1>
+  </header>
+
+  <div class="section-container">
+    <h2>Description:</h2>
+    <p>The <code>useradd</code> command is used to create a new user account on a Linux or UNIX-based system. This command allows system administrators to define several user attributes, including the user's home directory, login shell, user ID, and group memberships. It is a vital tool for user management in a multi-user environment, as it helps automate the process of adding new users to the system.</p>
+  </div>
+
+  <div class="section-container">
+    <h2>Usage:</h2>
+    <p>The <code>useradd</code> command is used to add new user accounts to the system. It allows the administrator to specify important options, such as the user’s default shell, home directory, and initial groups. A typical syntax is as follows:</p>
+    <pre><code>useradd [options] username</code></pre>
+    <p>Common options for the <code>useradd</code> command include:</p>
+    <ul>
+      <li><code>-m</code>: Creates the user's home directory if it doesn't exist.</li>
+      <li><code>-s</code>: Specifies the user's login shell (e.g., <code>/bin/bash</code>).</li>
+      <li><code>-G</code>: Adds the user to supplementary groups.</li>
+      <li><code>-u</code>: Specifies the user’s ID (UID).</li>
+    </ul>
+  </div>
+
+  <div class="section-container">
+    <h2>Example:</h2>
+    <pre><code>useradd -m -s /bin/bash newuser</code></pre>
+    <p>This command creates a new user named <code>newuser</code>, with a home directory and a bash shell.</p>
+  </div>
+
+  <div class="section-container">
+    <h2>Screenshot:</h2>
+    <img src="use.jpg" alt="use.jpg">
+  </div>
+
+  <div class="section-container">
+    <h2>Common Use Cases:</h2>
+    <ul>
+      <li>Creating new user accounts for employees or users.</li>
+      <li>Assigning default settings like home directory and shell to new users.</li>
+      <li>Managing user groups and assigning users to appropriate groups.</li>
+    </ul>
+  </div>
+
+</body>
+</html>

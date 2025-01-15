@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>groupmod Command</title>
+  <style>
+    /* General Body Styles */
+    body {
+      font-family: Arial, sans-serif;
+      color: #1a1a1a; /* Dark gray for text readability */
+      background: linear-gradient(to bottom right, #f7f7f7, #dcdcdc); /* Black and white pastel gradient */
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    /* Background Animation */
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* Header Styles */
+    header {
+      text-align: center;
+      margin: 20px 0;
+      text-decoration: none;
+      animation: fadeIn 2s ease-out; /* Animation for header */
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      font-family: Algerian, serif; /* Set font to Algerian */
+      color: #4a4a4a; /* Neutral pastel gray */
+      text-shadow: 0 4px 8px rgba(74, 74, 74, 0.4);
+      text-decoration: none; /* Remove underline */
+    }
+
+    /* Section Container */
+    .section-container {
+      width: 90%;
+      max-width: 800px;
+      background-color: rgba(255, 255, 255, 0.95); /* Soft white pastel for sections */
+      padding: 20px;
+      border-radius: 10px;
+      margin: 10px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      animation: fadeInSection 1.5s ease-out forwards; /* Animation for sections */
+    }
+
+    .section-container:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Section Headers */
+    .section-container h2 {
+      color: #4a4a4a; /* Neutral gray for section headers */
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      font-family: Algerian, serif;
+      text-decoration: none; /* Remove underline */
+      border-bottom: none; /* Remove the border that creates an underline */
+      animation: fadeInText 2s ease-out; /* Animation for section headers */
+    }
+
+    /* Smaller Styled Box for Command */
+    .command-box {
+      background-color: #e0e0e0;
+      color: #333;
+      padding: 5px 10px; /* Reduced padding */
+      border-radius: 6px; /* Smaller border radius */
+      margin: 5px 0; /* Reduced margin */
+      font-family: Consolas, monospace;
+      font-size: 1em; /* Reduced font size */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+      border: 2px solid #ccc;
+    }
+
+    /* Image Styling */
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    ul {
+      font-size: 1.2em;
+    }
+
+    /* Link Styles */
+    a {
+      text-decoration: none; /* Remove underline */
+      color: black; /* Blue color for links */
+    }
+
+    a:hover {
+      color: black; /* Change color on hover for interactivity */
+    }
+
+    /* Footer Styles */
+    footer {
+      text-align: center;
+      background-color: rgba(74, 74, 74, 0.9); /* Dark pastel gray footer */
+      padding: 15px;
+      width: 100%;
+      color: white;
+      margin-top: auto;
+      font-size: 0.9em;
+      box-shadow: 0 -2px 6px rgba(74, 74, 74, 0.3);
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none; /* Removed underline */
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #c4c4c4; /* Soft pastel gray for hover effect */
+    }
+
+    /* Keyframe Animations */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInSection {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInText {
+      0% {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>groupmod Command</h1>
+  </header>
+
+  <!-- Description Section -->
+  <div class="section-container">
+    <h2>Description:</h2>
+    <p>The <span class="command-box"><code>groupmod</code></span> command is used to modify an existing group on a Linux system. It allows administrators to change a group’s name, GID (Group ID), or other attributes.</p>
+  </div>
+
+  <!-- Usage Section -->
+  <div class="section-container">
+    <h2>Usage:</h2>
+    <p>The syntax for the <code>groupmod</code> command is:</p>
+    <pre><code>groupmod [options] group_name</code></pre>
+    <p>For example:</p>
+    <pre><code>sudo groupmod -n new_group_name old_group_name</code></pre>
+    <p>This changes the group name from <code>old_group_name</code> to <code>new_group_name</code>.</p>
+  </div>
+
+  <!-- Example Section -->
+  <div class="section-container">
+    <h2>Example:</h2>
+    <pre><code>sudo groupmod -g 1001 developers</code></pre>
+    <p>This command changes the GID of the <code>developers</code> group to <code>1001</code>.</p>
+  </div>
+
+  <!-- Screenshot Section -->
+  <div class="section-container">
+    <h2>Screenshot:</h2>
+    <img src="groupmod.jpg" alt="groupmod.jpg">
+  </div>
+
+  <!-- Use Cases Section -->
+  <div class="section-container">
+    <h2>Common Use Cases:</h2>
+    <ul>
+      <li>Renaming a group.</li>
+      <li>Changing the GID of a group.</li>
+      <li>Reorganizing system group configurations.</li>
+    </ul>
+  </div>
+
+ 
+</body>
+</html>

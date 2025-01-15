@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sudo Command</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #1a1a1a; /* Dark gray for text readability */
+      background: linear-gradient(to bottom right, #f7f7f7, #dcdcdc); /* Black and white pastel gradient */
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    /* Background Animation */
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    header {
+      text-align: center;
+      margin: 20px 0;
+      text-decoration: none;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      font-family: Algerian, serif; /* Set font to Algerian */
+      color: #4a4a4a; /* Neutral pastel gray */
+      text-shadow: 0 4px 8px rgba(74, 74, 74, 0.4);
+    }
+
+    .section-container {
+      width: 90%;
+      max-width: 800px;
+      background-color: rgba(255, 255, 255, 0.95); /* Soft white pastel for sections */
+      padding: 20px;
+      border-radius: 10px;
+      margin: 10px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      animation: fadeInSection 1.5s ease-out forwards;
+    }
+
+    .section-container:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .section-container h2 {
+      color: #4a4a4a;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      font-family: Algerian, serif;
+    }
+
+    pre {
+      background-color: #f0f0f0;
+      color: #333;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    ul {
+      font-size: 1.2em;
+    }
+
+    @keyframes fadeInSection {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>sudo Command</h1>
+  </header>
+
+  <div class="section-container">
+    <h2>Description:</h2>
+    <p>The <code>sudo</code> command allows a permitted user to execute commands with superuser privileges or as another user, as defined by the system's security policy. It ensures secure delegation of administrative tasks.</p>
+  </div>
+
+  <div class="section-container">
+    <h2>Usage:</h2>
+    <p>The <code>sudo</code> command temporarily grants elevated privileges for a specific command. The syntax is:</p>
+    <pre>sudo [options] command</pre>
+    <p>Common options include:</p>
+    <ul>
+      <li><code>-i</code>: Start a shell with root privileges.</li>
+      <li><code>-u</code>: Run the command as a specific user.</li>
+      <li><code>-k</code>: Clear the user's cached credentials.</li>
+    </ul>
+  </div>
+
+  <div class="section-container">
+    <h2>Example:</h2>
+    <pre>sudo apt update</pre>
+    <p>This command updates the system's package list using administrative privileges.</p>
+  </div>
+
+  <div class="section-container">
+    <h2>Screenshot:</h2>
+    <img src="sudo .jpg" alt="sudo .jpg">
+  </div>
+
+  <div class="section-container">
+    <h2>Common Use Cases:</h2>
+    <ul>
+      <li>Running administrative commands like installing software or updating packages.</li>
+      <li>Editing system files that require root access.</li>
+      <li>Switching to another user for executing commands.</li>
+    </ul>
+  </div>
+</body>
+</html>
